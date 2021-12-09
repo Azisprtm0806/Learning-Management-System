@@ -1,0 +1,63 @@
+<h3>Forms Tambah Data</h3>
+
+<!-- Start Validation -->
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Tambah Data Mahasiswa</h4>
+      </div>
+      <div class="card-content">
+        <div class="card-body">
+          <% if (typeof errors != 'undefined') { %>
+          <div class="alert alert-danger">
+            <ul>
+              <% errors.forEach(error => { %>
+              <li><%= error.msg %></li>
+              <% }) %>
+            </ul>
+          </div>
+          <% } %>
+          <form class="form" method="post" action="/dosen">
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <div class="form-group">
+                  <label for="city-column">Nama</label>
+                  <input
+                    type="text"
+                    id="city-column nama"
+                    name="nama"
+                    class="form-control"
+                    placeholder="Nama"
+                    name="city-column"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group">
+                  <label for="last-name-column">Matakuliah</label>
+                  <input
+                    type="text"
+                    id="last-name-column matkul"
+                    name="matkul"
+                    class="form-control"
+                    placeholder="Matakuliah"
+                    name="lname-column"
+                  />
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary mr-1 mb-1">
+                  Submit
+                </button>
+                <button type="reset" class="btn btn-light-secondary mr-1 mb-1">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

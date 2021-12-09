@@ -1,0 +1,255 @@
+<div class="row">
+  <div class="col-12 col-md-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb breadcrumb-custom bg-info">
+        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          <span>Matakuliah</span>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<h3></h3>
+<div class="row">
+  <!-- aljabar linear -->
+  <% aljabar.forEach(al => { %>
+  <div class="col-xl-4">
+    <div
+      class="
+        card
+        border-left border-top border-right border-bottom border-primary
+        mb-3
+      "
+    >
+      <div class="card-header">Teknik Informatika</div>
+      <div class="card-body text-primary">
+        <a href="/mahasiswa-<%= al.matKul %>">
+          <h5 class="card-title text-center"><%= al.matKul %></h5>
+        </a>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped"
+            role="progressbar"
+            style="width: 100%"
+            aria-valuenow="10"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+
+  <!-- Bahasa indonesia-->
+
+  <% indo.forEach(indo => { %>
+  <div class="col-xl-4">
+    <div
+      class="
+        card
+        border-left border-top border-right border-bottom border-primary
+        mb-3
+      "
+    >
+      <div class="card-header">Teknik Informatika</div>
+      <div class="card-body text-primary">
+        <a href="/mahasiswa-<%= indo.matKul %>">
+          <h5 class="card-title text-center"><%= indo.matKul %></h5>
+        </a>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped"
+            role="progressbar"
+            style="width: 100%"
+            aria-valuenow="10"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+
+  <!-- Kalkulus II -->
+  <% kalkulus.forEach(kalkulus => { %>
+  <div class="col-xl-4">
+    <div
+      class="
+        card
+        border-left border-top border-right border-bottom border-primary
+        mb-3
+      "
+    >
+      <div class="card-header">Teknik Informatika</div>
+      <div class="card-body text-primary">
+        <a href="/mahasiswa-<%= kalkulus.matKul %>">
+          <h5 class="card-title text-center"><%= kalkulus.matKul %></h5>
+        </a>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped"
+            role="progressbar"
+            style="width: 100%"
+            aria-valuenow="10"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+
+  <!-- Struktur Data -->
+  <% strukturData.forEach(strukturData => { %>
+  <div class="col-xl-4">
+    <div
+      class="
+        card
+        border-left border-top border-right border-bottom border-primary
+        mb-3
+      "
+    >
+      <div class="card-header">Teknik Informatika</div>
+      <div class="card-body text-primary">
+        <a href="/mahasiswa-<%= strukturData.matKul %>">
+          <h5 class="card-title text-center"><%= strukturData.matKul %></h5>
+        </a>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped"
+            role="progressbar"
+            style="width: 100%"
+            aria-valuenow="10"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+
+  <!-- Teknik DIgital -->
+  <% tekDig.forEach(tekDig => { %>
+  <div class="col-xl-4">
+    <div
+      class="
+        card
+        border-left border-top border-right border-bottom border-primary
+        mb-3
+      "
+    >
+      <div class="card-header">Teknik Informatika</div>
+      <div class="card-body text-primary">
+        <a href="/mahasiswa-<%= tekDig.matKul %>">
+          <h5 class="card-title text-center"><%= tekDig.matKul %></h5>
+        </a>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped"
+            role="progressbar"
+            style="width: 100%"
+            aria-valuenow="10"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+
+  <!-- Matematika DIskrit -->
+  <% matDisk.forEach(matDisk => { %>
+  <div class="col-xl-4">
+    <div
+      class="
+        card
+        border-left border-top border-right border-bottom border-primary
+        mb-3
+      "
+    >
+      <div class="card-header">Teknik Informatika</div>
+      <div class="card-body text-primary">
+        <a href="/mahasiswa-<%= matDisk.matKul %>">
+          <h5 class="card-title text-center"><%= matDisk.matKul %></h5>
+        </a>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped"
+            role="progressbar"
+            style="width: 100%"
+            aria-valuenow="10"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+
+  <!-- Syari'ah -->
+  <% syar.forEach(syar => { %>
+  <div class="col-xl-4">
+    <div
+      class="
+        card
+        border-left border-top border-right border-bottom border-primary
+        mb-3
+      "
+    >
+      <div class="card-header">Teknik Informatika</div>
+      <div class="card-body text-primary">
+        <a href="/mahasiswa-<%= syar.matKul %>">
+          <h5 class="card-title text-center"><%= syar.matKul %></h5>
+        </a>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped"
+            role="progressbar"
+            style="width: 100%"
+            aria-valuenow="10"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+
+  <!-- Statiska dan Probabilitas -->
+  <% statiska.forEach(stat => { %>
+  <div class="col-xl-4">
+    <div
+      class="
+        card
+        border-left border-top border-right border-bottom border-primary
+        mb-3
+      "
+    >
+      <div class="card-header">Teknik Informatika</div>
+      <div class="card-body text-primary">
+        <a href="/mahasiswa-<%= stat.matKul %>">
+          <h5 class="card-title text-center"><%= stat.matKul %></h5>
+        </a>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped"
+            role="progressbar"
+            style="width: 100%"
+            aria-valuenow="10"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>

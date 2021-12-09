@@ -1,0 +1,136 @@
+<div class="row">
+    <div class="col-12 col-md-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-custom  bg-info">
+          <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+          <li class="breadcrumb-item"><a href="#">User</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><span>Dosen</span></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <h3></h3>
+  
+  <div class="row">
+    <!--Start table-->
+    <div class="col-12 col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Daftar Dosen Reguler A 2020</h4>
+        </div>
+        <% if (msg.length !== 0) { %>
+          <div class="alert alert-success alert-icon alert-dismissible fade show">
+            <strong>Success!</strong>
+            <%= msg %>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <% } %>
+        <div class="card-content">
+          <div class="card-body">
+            <div class="container mb-2">
+              <div class="row row-cols-2 row-cols-lg-3">
+                <div class="col-4 col-lg-2">
+                  <a href="/dosen-add" class="btn btn-outline-info btn-sm mb-2"
+              ><i class="fas fa-plus"></i></a
+            >
+                </div>
+                <div class="col-4 col-lg-2"></div>
+                <div class="col-4 col-lg-2"></div>
+                <div class="col-4 col-lg-2"></div>
+                <div class="col">
+                  <form class="search">
+                    <input
+                      class="form-control me-2 boxSearch"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                </div>
+              </div>
+            </div>
+            </form>
+            <!-- Table with outer spacing -->
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <td>No</td>
+                    <td>NAMA</td>
+                    <td>MATAKULIAH</td>
+                    <td>aksi</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% if (dosen < 1) { %>
+                  <tr>
+                    <td colspan="4">
+                      <div class="alert alert-warning">Data masih kosong!!</div>
+                    </td>
+                  </tr>
+                  <% } %> <% dosen.forEach((dosen, i) => { i++ %>
+                  <tr class="listSearch">
+                    <td scope="row"><%= i++ %></td>
+                    <td class="text-bold-500"><%= dosen.nama %></td>
+                    <td class="text-bold-500"><%= dosen.matkul %></td>
+                    <td class="text-bold-500">
+                      <a
+                        href="/dosen-edit/<%= dosen._id %>"
+                        class="btn btn-info badge"
+                        ><i class="fas fa-edit"></i
+                      ></a>
+                      <form
+                        action="/dosen?_method=DELETE"
+                        method="post"
+                        class="d-inline"
+                      >
+                        <input
+                          type="hidden"
+                          name="nama"
+                          value="<%= dosen.nama %>"
+                        />
+                        <button
+                          type="submit"
+                          class="btn btn-danger badge"
+                          onclick="return confirm('yakin ingin menghapus?')"
+                        >
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </form>
+                    </td>
+                  </tr>
+                  <% }) %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+      $(document).ready(function($){
+  
+          $('.listSearch td').each(function(){
+              $(this).attr('searchData', $(this).text().toLowerCase());
+          });
+          $('.boxSearch').on('keyup', function(){
+          var dataList = $(this).val().toLowerCase();
+              $('.listSearch td').each(function(){
+                  if ($(this).filter('[searchData *= ' + dataList + ']').length > 0 || dataList.length < 1) {
+                      $(this).show();
+                  } else {
+                      $(this).hide();
+                  }
+              });
+          });
+  
+      });
+  </script>

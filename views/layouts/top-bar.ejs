@@ -1,0 +1,50 @@
+<!--Topbar -->
+<div class="topbar transition">
+  <div class="bars">
+    <button type="button" class="btn transition" id="sidebar-toggle">
+      <i class="las la-bars"></i>
+    </button>
+  </div>
+  <div class="menu">
+    <ul>
+      <li>
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" title="Dark Or White" />
+            <div class="slider round"></div>
+          </label>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown">
+          <div
+            class="dropdown-toggle"
+            id="dropdownProfile"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <img src="./images/avatar/avatar-2.png" alt="Profile" />
+          </div>
+          <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+            <a class="dropdown-item" href="/profileAdmin">
+              <i class="las la-user mr-2"></i> My Profile
+            </a>
+
+            <div class="dropdown-divider"></div>
+            <form action="/logout" method="GET">
+              <button
+                style="width: 150px"
+                class="dropdown-item btn btn-default"
+                type="submit"
+                onclick="return confirm('yakin ingin logout?')"
+              >
+                <i class="las la-sign-out-alt mr-2"></i> Sign Out
+              </button>
+            </form>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

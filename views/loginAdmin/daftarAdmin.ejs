@@ -1,0 +1,176 @@
+<h3></h3>
+<div class="col-md-8 col-8">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Daftar Admin</h4>
+    </div>
+    <div class="card-content">
+      <div class="card-body">
+        <form
+          class="form form-horizontal"
+          method="post"
+          enctype="multipart/form-data"
+          action="/daftarAdmin"
+        >
+          <div class="form-body">
+            <% if (typeof errors != 'undefined') { %>
+            <div
+              class="alert alert-danger alert-icon alert-dismissible fade show"
+            >
+              <ul>
+                <% errors.forEach(error => { %>
+                <li>
+                  <%= error.msg %><button
+                    type="button"
+                    class="close"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </li>
+                <% }) %>
+              </ul>
+            </div>
+            <% } %> <% if (typeof message != 'undefined') { %>
+            <div
+              class="alert alert-danger alert-icon alert-dismissible fade show"
+            >
+              <ul>
+                <li>
+                  <%= message %><button
+                    type="button"
+                    class="close"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <% } %> <% if (typeof berhasil != 'undefined') { %>
+            <div
+              class="alert alert-primary alert-icon alert-dismissible fade show"
+            >
+              <ul>
+                <li>
+                  <%= berhasil %><button
+                    type="button"
+                    class="close"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <% } %>
+            <div class="row">
+              <div class="col-md-4">
+                <label>Nama</label>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group has-icon-left">
+                  <div class="position-relative">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nama"
+                      id="first-name-icon"
+                      name="nama"
+                    />
+                    <div class="form-control-icon">
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label>Username</label>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group has-icon-left">
+                  <div class="position-relative">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="username"
+                      id="first-name-icon"
+                      name="username"
+                    />
+                    <div class="form-control-icon">
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label>Email</label>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group has-icon-left">
+                  <div class="position-relative">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                      id="first-name-icon"
+                      name="email"
+                    />
+                    <div class="form-control-icon">
+                      <i data-feather="mail"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label>Password</label>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group has-icon-left">
+                  <div class="position-relative">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Password"
+                      name="password"
+                    />
+                    <div class="form-control-icon">
+                      <i data-feather="lock"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label>Images</label>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group has-icon-left">
+                  <div class="position-relative">
+                    <input type="file" name="image" />
+                    <div class="form-control-icon">
+                      <i data-feather="lock"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary mr-1 mb-1">
+                  Daftar
+                </button>
+                <button type="reset" class="btn btn-light-secondary mr-1 mb-1">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <a href="/dashboard">Kembali</a>
+      </div>
+    </div>
+  </div>
+</div>

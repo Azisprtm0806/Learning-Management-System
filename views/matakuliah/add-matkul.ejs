@@ -1,0 +1,52 @@
+<h3>Tambah Data Matakuliah</h3>
+
+<div class="col-md-8 col-12 card-box">
+  <div class="card card-matkul">
+    <div class="card-header">
+      <h4 class="card-title">Horizontal Form with Icons</h4>
+    </div>
+    <div class="card-content">
+      <div class="card-body">
+        <% if (typeof errors != 'undefined') { %>
+        <div class="alert alert-danger">
+          <ul>
+            <% errors.forEach(error => { %>
+            <li><%= error.msg %></li>
+            <% }) %>
+          </ul>
+        </div>
+        <% } %>
+        <form class="form form-horizontal" method="post" action="/cours">
+          <div class="form-body">
+            <div class="row">
+              <div class="col-md-4">
+                <label>MataKuliah</label>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group has-icon-left">
+                  <div class="position-relative">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Masukan Nama Mata Kuliah"
+                      id="first-name-icon matKul"
+                      name="matKul"
+                    />
+                    <div class="form-control-icon">
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary mr-1 mb-1">
+                  Tambah
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

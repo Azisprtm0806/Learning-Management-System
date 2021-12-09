@@ -1,0 +1,89 @@
+<h3>Forms Tambah Data</h3>
+
+<!-- Start Validation -->
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Tambah Data Mahasiswa</h4>
+      </div>
+      <div class="card-content">
+        <div class="card-body">
+          <% if (typeof errors != 'undefined') { %>
+          <div class="alert alert-danger">
+            <ul>
+              <% errors.forEach(error => { %>
+              <li><%= error.msg %></li>
+              <% }) %>
+            </ul>
+          </div>
+          <% } %>
+          <form class="form" method="post" action="/mahasiswa">
+            <div class="row">
+              <div class="col-md-6 col-12">
+                <div class="form-group">
+                  <label for="first-name-column">NPM</label>
+                  <input
+                    type="text"
+                    id="first-name-column npm"
+                    name="npm"
+                    class="form-control"
+                    placeholder="NPM"
+                    name="fname-column"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group">
+                  <label for="last-name-column">Email</label>
+                  <input
+                    type="email"
+                    id="last-name-column email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Email"
+                    name="lname-column"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group">
+                  <label for="city-column">Nama</label>
+                  <input
+                    type="text"
+                    id="city-column nama"
+                    name="nama"
+                    class="form-control"
+                    placeholder="Nama"
+                    name="city-column"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="form-group">
+                  <label for="country-floating">No HP</label>
+                  <input
+                    type="text"
+                    id="country-floating nohp"
+                    name="nohp"
+                    class="form-control"
+                    name="country-floating"
+                    placeholder="NO HP"
+                  />
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary mr-1 mb-1">
+                  Submit
+                </button>
+                <button type="reset" class="btn btn-light-secondary mr-1 mb-1">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

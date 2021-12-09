@@ -1,0 +1,87 @@
+<h3></h3>
+<div class="col-md-8 col-8">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Login Admin</h4>
+    </div>
+    <div class="card-content">
+      <div class="card-body">
+        <form class="form form-horizontal" method="POST" action="/loginAdmin">
+          <div class="form-body">
+            <% if (typeof message != 'undefined') { %>
+            <div
+              class="alert alert-danger alert-icon alert-dismissible fade show"
+            >
+              <ul>
+                <li>
+                  <%= message %><button
+                    type="button"
+                    class="close"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <% } %>
+            <div class="row">
+              <div class="col-md-4">
+                <label>Username</label>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group has-icon-left">
+                  <div class="position-relative">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="username atau email"
+                      id="first-name-icon"
+                      name="username"
+                      required
+                    />
+                    <div class="form-control-icon">
+                      <i data-feather="user"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label>Password</label>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group has-icon-left">
+                  <div class="position-relative">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Password"
+                      name="password"
+                      required
+                    />
+                    <div class="form-control-icon">
+                      <i data-feather="lock"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary mr-1 mb-1">
+                  Login
+                </button>
+                <button type="reset" class="btn btn-light-secondary mr-1 mb-1">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <a href="/loginPage">Kembali</a>
+        <div style="float: right; padding-bottom: 20px; padding-top: 50px">
+          <p>Lupa Password? <a href="/forgotPasswordAdmin">Click Disini.</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

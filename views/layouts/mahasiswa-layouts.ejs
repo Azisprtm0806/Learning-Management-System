@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title><%= title %></title>
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="./vendors/bootstrap/css/bootstrap.css" />
+    <!-- Style CSS (White)-->
+    <link rel="stylesheet" href="./css/White.css" />
+    <!-- Style CSS (Dark)-->
+    <link rel="stylesheet" href="./css/Dark.css" />
+    <!-- FontAwesome CSS-->
+    <link rel="stylesheet" href="./vendors/fontawesome/css/all.css" />
+    <!-- Icon LineAwesome CSS-->
+    <link
+      rel="stylesheet"
+      href="./vendors/lineawesome/css/line-awesome.min.css"
+    />
+  </head>
+  <body>
+    <%- include('topbar-mahasiswa') %>
+
+    <!--Content Start-->
+    <div class="sidebar-overlay"></div>
+    <div class="content transition">
+      <div class="container-fluid dashboard"><%- body %></div>
+    </div>
+
+    <%- include('sidebar-mahasiswa') %>
+
+    <!-- Footer -->
+    <div class="footer transition">
+      <hr />
+      <p>
+        &copy; Lerning
+        <a href="#" target="_blank">Reguler A</a>
+      </p>
+    </div>
+
+    <!-- Loader -->
+    <!-- <div class="loader">
+      <div class="spinner-border text-light" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <div class="loader-overlay"></div> -->
+
+    <!-- Library Javascipt-->
+    <script src="./vendors/bootstrap/js/jquery.min.js"></script>
+    <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./vendors/bootstrap/js/popper.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

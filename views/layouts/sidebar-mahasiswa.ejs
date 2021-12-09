@@ -1,0 +1,62 @@
+<!--Sidebar-->
+<div class="sidebar transition overlay-scrollbars">
+  <div class="logo">
+    <h2 style="font-weight: 700" class="mb-0">
+      LMS<span style="font-weight: 500">clone</span>
+    </h2>
+  </div>
+
+  <div class="sidebar-items">
+    <div class="accordion" id="sidebar-items">
+      <ul>
+        <p class="menu">Apps</p>
+
+        <li>
+          <a href="/mahasiswa-dashboard" class="items">
+            <i class="fa fa-tachometer-alt"></i>
+            <span>Dashoard</span>
+          </a>
+        </li>
+
+        <p class="menu">User Interface</p>
+
+        <li id="headingOne">
+          <a
+            href="onclick();"
+            class="submenu-items"
+            data-toggle="collapse"
+            data-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            <i class="fas fa-users"></i>
+            <span>Users</span>
+            <i class="fas la-angle-right"></i>
+          </a>
+        </li>
+        <div
+          id="collapseOne"
+          class="collapse submenu"
+          aria-labelledby="headingOne"
+          data-parent="#sidebar-items"
+        >
+          <ul>
+            <li>
+              <a href="/mahasiswa-mahasiswa">Mahasiswa</a>
+            </li>
+
+            <li>
+              <a href="/mahasiswa-dosen">Dosen</a>
+            </li>
+          </ul>
+        </div>
+        <li>
+          <a href="/mahasiswa-cours" class="items">
+            <i class="fas fa-book-reader"></i>
+            <span>MataKuliah</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
